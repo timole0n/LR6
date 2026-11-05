@@ -62,9 +62,9 @@ https://github.com/Kurtyanik/LR6/ (Fork).
 ![GitMerge](Screenshots/GitMerge.png)
 10. Удаление ветки branch1
 ![GitBranche/d](Screenshots/GitBranchd.png)
-11. Добавление текста в mergefile, коммит
+11. Добавление текста в mergefile.txt, коммит
 ![EchoGitCommit](Screenshots/EchoGitCommit.png)
-12. Создание файла CoolFile.txt, заполненого CoolText, коммит
+12. Создание файла CoolFile.txt, заполненного CoolText, коммит
 ![NewEchoGitCommit](Screenshots/NewEchoGitCommit.png)
 13. Откат коммита
 ![GitResetHard](Screenshots/GitResetHard.png)
@@ -72,6 +72,7 @@ https://github.com/Kurtyanik/LR6/ (Fork).
 ![GitBranch](Screenshots/GitBranch.png)
 
 ## Лог команд
+```
 git -v
 git config user.name
 git config user.email
@@ -90,5 +91,13 @@ git add CoolFile.txt
 git commit -m "create Coolfile.txt, add CoolText to CoolFile.txt
 git reset --hard HEAD~1
 git branch report
-
+git checkout report
+git add README.md
+git commit -m "fill out README.md partially"
+git log --pretty="%C(yellow)commit %h %nAuthor: %an %nDate: %cd %n%n%s%n" --date=short --graph
+git add Screenshots
+git add README.md
+git commit "add Screenshots folder with files, finalyze README.md"
+```
+История операций в форматированном виде (сокращённый хэш + дата + имя автора + комментарий)
 ![GitLogPretty](Screenshots/GitLogPretty.png)
