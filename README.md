@@ -1,6 +1,7 @@
+Грицай Иван 4541в
 # Лабораторная работа №6
-
 # Система контроля версий
+
 
 ## Цель лабораторной работы:
  изучение базовых возможностей системы управления версиями, опыт работы с Git Api, опыт работы с локальным  и удаленным репозиторием.
@@ -53,10 +54,41 @@ https://github.com/Kurtyanik/LR6/ (Fork).
 ![GitClone](Screenshots/GitClone.png)
 6. Добавление файла
 ![NewFile](Screenshots/NewFile.png)
-7. Просмотр изменений
-8. Merge в master, разрешение конфликта совмешением содержимого файла
-9. Удаление ветки branch1
-10. Добавление текста в mergefile
-11. Создание файла CoolFile.txt, заполненого CoolText
-12. Откат коммита
-13. Создание ветки для отчёта
+7. Стягивание изменений
+![GitPull](Screenshots/GitPull.png)
+8. Просмотр изменений
+![GitLog](Screenshots/GitLog.png)
+9. Merge в master, разрешение конфликта совмешением содержимого файла
+![GitMerge](Screenshots/GitMerge.png)
+10. Удаление ветки branch1
+![GitBranche/d](Screenshots/GitBranchd.png)
+11. Добавление текста в mergefile, коммит
+![EchoGitCommit](Screenshots/EchoGitCommit.png)
+12. Создание файла CoolFile.txt, заполненого CoolText, коммит
+![NewEchoGitCommit](Screenshots/NewEchoGitCommit.png)
+13. Откат коммита
+![GitResetHard](Screenshots/GitResetHard.png)
+14. Создание ветки для отчёта
+![GitBranch](Screenshots/GitBranch.png)
+
+## Лог команд
+git -v
+git config user.name
+git config user.email
+git clone https://github.com/timole0n/LR6
+git pull origin branch1
+git log --all --graph --oneline
+git merge branch1
+git add .
+git commit -m "resolve merge conflict by combining the contents of the file"
+git branch -d branch1
+echo NewText >> mergefile.txt
+git add mergefile.txt
+git commit -m "add NewText to mergefile.txt"
+echo CoolText > CoolFile.txt
+git add CoolFile.txt
+git commit -m "create Coolfile.txt, add CoolText to CoolFile.txt
+git reset --hard HEAD~1
+git branch report
+
+![GitLogPretty](Screenshots/GitLogPretty.png)
